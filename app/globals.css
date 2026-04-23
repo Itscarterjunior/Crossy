@@ -1,0 +1,11 @@
+/* Global styles with glassmorphism and animations */
+body {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
