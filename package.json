@@ -9,8 +9,9 @@
     "vercel-build": "next build"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+  "next": "latest",
+  "react": "latest",
+  "react-dom": "latest",
+  "firebase": "^12.12.1"
   }
 }
