@@ -1,5 +1,18 @@
-export default function Home() {
-  return (
+import { db } from "../lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";export default function Home() {
+ async function handleReconnect() {
+  try {
+    await addDoc(collection(db, "crosses"), {
+      place: "Coffee Bar",
+      time: serverTimestamp(),
+      status: "active"
+    });
+
+    alert("Reconnect saved!");
+  } catch (e) {
+    console.error(e);
+  }
+} return (
     <div style={{
       height: "100vh",
       background: "#0b0b0f",
@@ -36,8 +49,9 @@ export default function Home() {
 
       </div>
 
-      <button style={buttonStyle}>
-        Reconnect
+      <button style={buttonStyle} onClick={handleReconnect}>
+  Reconnect
+</button>
       </button>
     </div>
   );
