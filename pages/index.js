@@ -51,7 +51,7 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";export 
 
       <button style={buttonStyle} onClick={handleReconnect}>
   Reconnect
-</button>
+
       </button>
     </div>
   );
