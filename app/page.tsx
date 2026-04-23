@@ -1,13 +1,27 @@
-// Homepage with Connect Instantly button
-import React from 'react';
+"use client";
 
-const HomePage = () => {
+import Link from "next/link";
+
+export default function Home() {
   return (
-    <div>
-      <h1>Welcome to Crossy!</h1>
-      <button>Connect Instantly</button>
+    <div className="home-container">
+      <div className="home-content">
+        <h1 className="home-title">Crossy</h1>
+        <p className="home-subtitle">Real-world human connections in real time</p>
+
+        <Link href="/nearby">
+          <button className="cta-button">
+            Connect Instantly
+            <span className="button-glow"></span>
+          </button>
+        </Link>
+
+        <div className="floating-elements">
+          <div className="float-element" style={{ animationDelay: "0s" }}></div>
+          <div className="float-element" style={{ animationDelay: "2s" }}></div>
+          <div className="float-element" style={{ animationDelay: "4s" }}></div>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default HomePage;
+}
