@@ -13,5 +13,4 @@
   "react": "latest",
   "react-dom": "latest",
   "firebase": "^12.12.1"
-  }
 }
